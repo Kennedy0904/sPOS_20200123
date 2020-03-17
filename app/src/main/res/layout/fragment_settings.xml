@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingFragmentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Setting EMV -->
+            <LinearLayout
+                android:id="@+id/setting_emv_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvEmvConfig"
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/emv_config"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
+
+            </LinearLayout>
+
+            <!-- Setting Merchant -->
+            <LinearLayout
+                android:id="@+id/setting_merchant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvMerchant"
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/merchant"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
+
+            </LinearLayout>
+
+            <!-- Setting Transaction -->
+            <LinearLayout
+                android:id="@+id/setting_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/transaction"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
+
+            </LinearLayout>
+
+            <!-- Setting Key -->
+            <LinearLayout
+                android:id="@+id/setting_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/key"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
+
+            </LinearLayout>
+
+            <!-- Setting System -->
+            <LinearLayout
+                android:id="@+id/setting_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center_vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="162dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/system"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_next"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#c0c0c0" />
+
+            </LinearLayout>
+
+<!--            &lt;!&ndash; Language &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_language"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="20dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/language"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/language"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:paddingLeft="20dp"-->
+<!--                    android:text="@string/english"-->
+<!--                    android:textSize="14sp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <View-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="#c0c0c0" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_apiID"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/merch_api_id"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/apiIDtxt"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_apiPassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/merch_api_password"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/apiPasswordtxt"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Merchant Reference No. &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_merRef"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/merch_ref"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/merRef"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:text="@string/auto"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Payment Timeout Setting &ndash;&gt;-->
+<!--            &lt;!&ndash;Edited 25/07/18 by KJ&ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_paymentTimeout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/setting_payment_timeout"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+<!--            </LinearLayout>-->
+<!--            &lt;!&ndash;done Edited 25/07/18 by KJ&ndash;&gt;-->
+
+<!--            &lt;!&ndash; Printer &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_printer"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/Printer"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/connectedDevice"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:text="device name"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Receipt Printing &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_printingMode"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/receipt_printing"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/receiptPrinting"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:text="@string/mode1"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Refund - Password Protection &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/refund_pw_protect"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/refund_pw_protect"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/pw_protect_enable"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:visibility="invisible" />-->
+
+<!--                    <Switch-->
+<!--                        android:id="@+id/enablePwProtection"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="false" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Refund - Same Day &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/refund_same_day"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/refund_same_day"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/same_day_refund_enable"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:visibility="invisible" />-->
+
+<!--                    <Switch-->
+<!--                        android:id="@+id/enableSameDayRefund"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="false" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Setting Module Password &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_pw"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/settings_pw"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/settingPwText"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp" />-->
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Stationery Order &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/email_setting_control"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/stationery_order"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/onOff"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:visibility="invisible" />-->
+
+<!--                    <Switch-->
+<!--                        android:id="@+id/orderControl"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="false" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Stationery Order Email &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/emailSetting"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/setting_email"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/stationery_order_email"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/supportEmail"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:text="@string/input_order_Email"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Online Auto Update &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/updateSettings"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone">-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/update_settings"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Transaction History Checking &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/transaction_history_checking"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone" >-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/transaction_history_checking"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/historyDays"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Void - Password Protection &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/void_pw_protect"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="gone" >-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/void_pw_protect"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/void_protect_enable"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:visibility="invisible" />-->
+
+<!--                    <Switch-->
+<!--                        android:id="@+id/enableVoidPwProtection"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:checked="false" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Version Number &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/version_linear"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/version_no"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/mpos_version"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/mpos_version"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:paddingLeft="20dp"-->
+<!--                        android:text="1.0.0"-->
+<!--                        android:textSize="14sp" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; EMV Config &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:id="@+id/setting_emv_config"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:visibility="visible">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:padding="20dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/emv_config"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <View-->
+<!--                    android:layout_width="fill_parent"-->
+<!--                    android:layout_height="2dp"-->
+<!--                    android:background="#c0c0c0" />-->
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

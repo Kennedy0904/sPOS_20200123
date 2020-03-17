@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_columnSpan="1"
+    grid:alignmentMode="alignBounds"
+    grid:columnCount="3"
+    grid:rowOrderPreserved="true"
+    grid:useDefaultMargins="true">
+
+    <RelativeLayout
+        android:id="@+id/boost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_boost"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_boost" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_boost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/boost" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/olepay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_olepay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_olepay" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_olepay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/olepay" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/payme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="invisible"
+        grid:layout_columnWeight="1"
+        grid:layout_rowWeight="1"
+        grid:layout_gravity="fill">
+
+        <ImageView
+            android:id="@+id/ic_payme"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_payme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_payme"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/payme" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/paynow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_rowWeight="1"
+        grid:layout_gravity="fill">
+
+        <ImageView
+            android:id="@+id/ic_paynow"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_paynow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_paynow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/paynow" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/promptpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_rowWeight="1"
+        grid:layout_gravity="fill">
+
+        <ImageView
+            android:id="@+id/ic_promptPay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_promptpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_promptPay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/promptpay" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bharatpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_rowWeight="1"
+        grid:layout_gravity="fill">
+
+        <ImageView
+            android:id="@+id/ic_bharatpay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_bharatpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_bharatpay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/bharatpay" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/masterwallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_rowWeight="1"
+        grid:layout_gravity="fill">
+
+        <ImageView
+            android:id="@+id/ic_masterWallet"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_masterwallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_masterWallet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/masterwallet" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mVisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1">
+
+        <ImageView
+            android:id="@+id/ic_mvisa"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_mvisa" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_mvisa"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="mVisa" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.GridLayout>

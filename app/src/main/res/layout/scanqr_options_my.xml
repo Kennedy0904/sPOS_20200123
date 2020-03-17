@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_columnSpan="1"
+    grid:alignmentMode="alignBounds"
+    grid:columnCount="3"
+    grid:rowOrderPreserved="true"
+    grid:useDefaultMargins="true">
+
+    <!-- AliPay -->
+    <RelativeLayout
+        android:id="@+id/Alipay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_alipay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_alipay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_alipay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/alipay" />
+
+    </RelativeLayout>
+
+    <!-- AliPay HK -->
+    <RelativeLayout
+        android:id="@+id/AlipayHK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_alipayhk"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_alipayhk" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_alipayhk"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/alipayhk" />
+
+    </RelativeLayout>
+
+    <!-- Boost -->
+    <RelativeLayout
+        android:id="@+id/boost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_boost"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_boost" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_boost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/boost" />
+
+    </RelativeLayout>
+
+    <!-- WechatPay -->
+    <RelativeLayout
+        android:id="@+id/weChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_wechatpay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_wechatpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_wechatpay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/wechatpay" />
+
+    </RelativeLayout>
+
+    <!-- WechatPay HK -->
+    <RelativeLayout
+        android:id="@+id/weChatHK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_wechatpayHK"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_wechatpayhk" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_wechatpayHK"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/wechatpayhk" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AlipayTH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_alipayTH"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_alipayth" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_alipayTH"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/alipayth" />
+
+    </RelativeLayout>
+
+    <!-- GrabPay -->
+    <RelativeLayout
+        android:id="@+id/grabpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_grabpay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_grabpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_grabpay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/grabpay" />
+
+    </RelativeLayout>
+
+    <!-- LinePay -->
+    <RelativeLayout
+        android:id="@+id/linepay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_linepay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_linepay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_linepay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/linepay" />
+
+    </RelativeLayout>
+
+    <!-- MasterWallet -->
+    <RelativeLayout
+        android:id="@+id/masterwallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_masterWallet"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_masterwallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_masterWallet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/masterwallet" />
+
+    </RelativeLayout>
+
+    <!-- UnionPay -->
+    <RelativeLayout
+        android:id="@+id/UnionPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_unionpay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/unionpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_unionpay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/unionpay" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.GridLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestConnection">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/signalImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/signal" />
+
+        <TextView
+            android:id="@+id/signalMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/signalMessage"
+            android:textColor="#555555"
+            android:textSize="@dimen/def_fontSize" />
+
+        <LinearLayout
+            android:id="@+id/signalLayout"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/signalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/signal"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize" />
+
+            <TextView
+                android:id="@+id/signalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="signal"
+                android:textColor="#555555"
+                android:textStyle="bold"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/checkInternetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_lightblue"
+            android:textColor="@color/white"
+            android:layout_marginTop="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/checkConnection" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

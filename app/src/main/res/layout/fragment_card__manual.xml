@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Card_Manual_Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:id="@+id/manual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@drawable/icon_background"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/ic_manual"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_manualkeyin" />
+
+            <TextView
+                android:id="@+id/txtManual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ic_manual"
+                android:background="#1296e2"
+                android:gravity="center_horizontal"
+                android:padding="3dp"
+                android:text="Manual"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Swipe Right For Insert, Swipe and Tap" />
+
+</LinearLayout>
+

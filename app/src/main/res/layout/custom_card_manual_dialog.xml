@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/dialog_padding"
+    android:paddingRight="@dimen/dialog_padding"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_rounded_corners"
+        android:padding="@dimen/def_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/s_fontSize"
+            android:padding="@dimen/def_padding"
+            android:text="Card Payment"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_close_white_24dp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/def_padding"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/edt1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:background="@drawable/edittext_rounded_corners" >
+
+            <ImageView
+                android:id="@+id/imgId1"
+                android:layout_width="@dimen/edt_height"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:padding="@dimen/space_padding"
+                android:src="@drawable/ico_cardno" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/def_padding"
+                android:layout_marginTop="@dimen/def_padding"
+                android:layout_toRightOf="@+id/imgId1"
+                android:background="#cecece" />
+
+            <EditText
+                android:id="@+id/edtCardno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/def_padding"
+                android:layout_toRightOf="@+id/divider1"
+                android:background="@drawable/edittext_rounded_corners"
+                android:hint="Card No"
+                android:inputType="number"
+                android:padding="@dimen/def_padding"
+                android:singleLine="true"
+                android:textColor="#555555"
+                android:textColorHint="#8f8f8f"
+                android:textSize="@dimen/def_fontSize" />
+
+            <ImageView
+                android:id="@+id/imgCardType"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edt2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:layout_marginTop="@dimen/s_padding"
+            android:background="@drawable/edittext_rounded_corners" >
+
+            <ImageView
+                android:id="@+id/imgId2"
+                android:layout_width="@dimen/edt_height"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:padding="@dimen/space_padding"
+                android:src="@drawable/ico_cvv" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/def_padding"
+                android:layout_marginTop="@dimen/def_padding"
+                android:layout_toRightOf="@+id/imgId2"
+                android:background="#cecece" />
+
+            <EditText
+                android:id="@+id/edtCVV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/divider2"
+                android:background="@drawable/edittext_rounded_corners"
+                android:hint="CVV"
+                android:inputType="textPassword|number"
+                android:maxLength="4"
+                android:padding="@dimen/def_padding"
+                android:textColor="#555555"
+                android:textColorHint="#8f8f8f"
+                android:textSize="@dimen/def_fontSize" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:layout_marginTop="@dimen/s_padding" >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edt_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/s_padding"
+                android:layout_weight="5"
+                android:background="@drawable/button_dropdown"
+                android:drawSelectorOnTop="true"
+                android:gravity="left"
+                android:padding="@dimen/s_padding"
+                android:textSize="@dimen/def_fontSize" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edt_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="5"
+                android:background="@drawable/button_dropdown"
+                android:drawSelectorOnTop="true"
+                android:gravity="left"
+                android:padding="@dimen/s_padding"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/edt3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/edt_height"-->
+        <!--android:layout_marginTop="@dimen/s_padding"-->
+        <!--android:background="@drawable/edittext_rounded_corners" >-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/imgId3"-->
+        <!--android:layout_width="@dimen/edt_height"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginLeft="2dp"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:padding="@dimen/space_padding"-->
+        <!--android:src="@drawable/ico_cardholder" />-->
+
+        <!--<View-->
+        <!--android:id="@+id/divider3"-->
+        <!--android:layout_width="2dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="@dimen/def_padding"-->
+        <!--android:layout_marginTop="@dimen/def_padding"-->
+        <!--android:layout_toRightOf="@+id/imgId3"-->
+        <!--android:background="#cecece" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/edtCardname"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toRightOf="@+id/divider3"-->
+        <!--android:background="@drawable/edittext_rounded_corners"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Card Holder"-->
+        <!--android:padding="@dimen/def_padding"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="#555555"-->
+        <!--android:textColorHint="#8f8f8f"-->
+        <!--android:textSize="@dimen/def_fontSize" >-->
+        <!--</EditText>-->
+
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/content"
+            android:background="@color/white"
+            android:paddingTop="@dimen/large_padding"
+            android:paddingBottom="@dimen/xs_padding">
+
+            <Button
+                android:id="@+id/btn_clr"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/bheight"
+                android:text="CLEAR"
+                android:textSize="@dimen/def_fontSize"
+                android:textColor="@color/white"
+                android:padding="1dp"
+                android:background="@drawable/btn_lightblue"
+                android:layout_alignParentLeft="true"/>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/bheight"
+                android:text="CONFIRM"
+                android:textSize="@dimen/def_fontSize"
+                android:padding="1dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_lightblue"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

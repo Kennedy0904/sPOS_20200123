@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:weightSum="100">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="83"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/edtMername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:textSize="@dimen/s_fontSize" />
+
+        </LinearLayout>
+
+        <!-- Payment Type -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lblPayType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="#555555"
+                android:text="@string/r_pay_type"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtPayType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Payment Method -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lblPayMethod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="#555555"
+                android:text="@string/r_pay_method"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtPayMethod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <!-- Payment Ref No -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_pay_ref_no"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtPayRef"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Ref 123456"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Merchant Ref No -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_mer_ref_no"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtMerRef"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Ref 654321"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Batch No -->
+        <LinearLayout
+            android:id="@+id/batchNolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/batch_no"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtBatchNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Ref 654321"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Invoice No -->
+        <LinearLayout
+            android:id="@+id/invoiceNolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_invoice_no"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtInvoiceNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Ref 654321"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Trace No -->
+        <LinearLayout
+            android:id="@+id/traceNolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_trace_no"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtTraceNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Ref 654321"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Card No / Txn No -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/cardnotitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="@string/r_card_no"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtCardNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="11112222****4444"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Card Holder -->
+        <LinearLayout
+            android:id="@+id/cardholderlinearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_card_holder"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtCardHolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Tester"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Transaction Date -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_transaction_date"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="25/04/2018 12:00:00"
+                android:textSize="@dimen/def_fontSize"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_status"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/edtStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="ACCEPTED"
+                android:textSize="15sp"
+                android:textColor="#0b609a"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <!-- Surcharge-->
+        <LinearLayout
+            android:id="@+id/surchargelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lblSurcharge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="#555555"
+                android:text="@string/r_surcharge"
+                android:textSize="@dimen/def_fontSize"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/edtSur_CurrCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#0b609a"
+                    android:layout_marginRight="@dimen/space_padding"
+                    android:textSize="@dimen/def_fontSize"
+                    android:visibility="visible"
+                    android:text="RMB"/>
+
+                <TextView
+                    android:id="@+id/edtSurcharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize"
+                    android:visibility="visible"
+                    android:text="100.00"
+                    android:layout_toRightOf="@id/edtSur_CurrCode"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/merRequestAmtlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lblmerRequestAmt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textColor="#555555"
+                android:text="@string/print_merRequestAmt"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/edtmerRequestAmt_CurrCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#0b609a"
+                    android:layout_marginRight="@dimen/space_padding"
+                    android:textSize="@dimen/def_fontSize"
+                    android:visibility="visible"
+                    android:text="RMB" />
+
+                <TextView
+                    android:id="@+id/edtmerRequestAmt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize"
+                    android:layout_toRightOf="@id/edtmerRequestAmt_CurrCode"
+                    android:visibility="visible"
+                    android:text="100.00" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Amount -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/lblAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/r_amount"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/edtCurrCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="RMB"
+                    android:textSize="@dimen/def_fontSize"
+                    android:textColor="#0b609a"
+                    android:layout_marginRight="@dimen/space_padding"/>
+
+                <TextView
+                    android:id="@+id/edtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="100.00"
+                    android:textSize="@dimen/def_fontSize"
+                    android:textColor="#0b609a"
+                    android:layout_toRightOf="@+id/edtCurrCode"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/s_margin"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/his_send_receipt"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="@dimen/bheight"
+            android:background="@drawable/btn_lightblue"
+            android:text="@string/send"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/def_fontSize"
+            android:padding="@dimen/def_padding"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/his_print_receipt"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="@dimen/bheight"
+            android:background="@drawable/btn_lightblue"
+            android:text="@string/Print"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/def_fontSize"
+            android:padding="@dimen/def_padding"/>
+        <View
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/void_capture"
+            android:layout_width="0dp"
+            android:layout_weight="15"
+            android:layout_height="@dimen/bheight"
+            android:background="@drawable/btn_lightblue"
+            android:text="@string/void_c"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/def_fontSize"
+            android:visibility="visible"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

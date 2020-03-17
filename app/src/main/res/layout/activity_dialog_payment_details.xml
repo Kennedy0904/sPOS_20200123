@@ -1,0 +1,244 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dialog_padding"
+    android:paddingRight="@dimen/dialog_padding"
+    android:paddingTop="@dimen/dpadding"
+    android:paddingBottom="@dimen/dpadding"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".DialogPaymentDetails" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_rounded_corners"
+        android:padding="@dimen/def_padding">
+        <TextView
+            android:id="@+id/txtAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/s_fontSize"
+            android:padding="@dimen/def_padding"
+            />
+        <ProgressBar
+            android:id="@+id/ico_loading"
+            style="@style/GenericProgressIndicator"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/space_padding"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_box"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/s_padding"
+        android:paddingLeft="@dimen/s_padding"
+        android:paddingRight="@dimen/s_padding"
+        android:paddingBottom="@dimen/large_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pay_phone_number"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtPhone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="603"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/txtPhone2"
+                    android:layout_width="334dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:text="123456789"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pay_email"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="asiapay@asiapay.com"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/amount"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtCurCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="RMB"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="334dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="0.00"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/remark"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtRemarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:text="RMB"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/dialogCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bheight"
+                android:layout_weight="15"
+                android:background="@drawable/btn_lightblue"
+                android:padding="@dimen/def_padding"
+                android:text="@string/cancel"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/dialogConfirm"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bheight"
+                android:layout_weight="15"
+                android:background="@drawable/btn_lightblue"
+                android:padding="@dimen/def_padding"
+                android:text="@string/confirm"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/def_fontSize" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

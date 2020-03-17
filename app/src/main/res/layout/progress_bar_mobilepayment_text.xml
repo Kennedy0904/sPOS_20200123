@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/progress_mobile_text_1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Enter Amount"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/progress_mobile_text_2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select Mobile Payment"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/progress_mobile_text_3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tap"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/progress_mobile_text_4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Payment Result"
+        android:textSize="12sp" />
+
+</LinearLayout>

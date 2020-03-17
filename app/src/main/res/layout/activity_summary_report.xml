@@ -1,0 +1,3408 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="@string/from"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtReportdate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_calendar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="@string/to"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtReportdate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B5B09C" />
+
+    <LinearLayout
+        android:id="@+id/grandtotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/grand_Total"
+            android:textColor="#555555"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/Transaction"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_trx_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#0A5284"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/Refund"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_refund_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#0A5284"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/RequestRefund"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_request_refund_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#0A5284"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/Void"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_void_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#0A5284"
+                android:textSize="@dimen/def_fontSize" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingPanel"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/GenericProgressIndicator"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_below="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/loading"
+            android:textSize="@dimen/def_fontSize"
+            android:textColor="#555555"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B5B09C" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:text="@string/noTxnFound"
+        android:textSize="@dimen/def_fontSize"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/pay_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scroll_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="100">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--ALIPAYCNOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/alipaycnoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ALIPAYCNOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipaycnoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipaycnoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipaycnoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipaycnoffl_total_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipaycnoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipaycnoffl_total_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipaycnoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipaycnoffl_total_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--ALIPAYCNOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--ALIPAYHKOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/alipayhkoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ALIPAYHKOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayhkoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayhkoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayhkoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipayhkoffl_total_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayhkoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipayhkoffl_total_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayhkoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipayhkoffl_total_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--ALIPAYHKOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--ALIPAYOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/alipayoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ALIPAYOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipayoffl_total_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipayoffl_total_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_alipayoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/alipayoffl_total_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--ALIPAYOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--BOOSTOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/boostoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/BOOSTOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_boostoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_boostoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_boostoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/boostoffl_total_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_boostoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/boostoffl_total_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_boostoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/boostoffl_total_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--BOOSTOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--GCASHOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/gcashoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/GCASHOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_gcashoffl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--GCASHOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--GRABPAYOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/grabpayoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/GRABPAYOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_grabpayoffl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--GRABPAYOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--MASTER Start-->
+                <LinearLayout
+                    android:id="@+id/master_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/master_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_master_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--MASTER End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--OEPAYOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/oepayoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/OEPAYOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_oepayoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_oepayoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_oepayoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/oepayoffl_total_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_oepayoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/oepayoffl_total_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_oepayoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/oepayoffl_total_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--OEPAYOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--PROMPTPAYOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/promptpayoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/PROMPTPAYOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_promptpayoffl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--PROMPTPAYOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--UNIONPAYOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/unionpayoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/UNIONPAYOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_unionpayoffl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--UNIONPAYOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--VISA Start-->
+                <LinearLayout
+                    android:id="@+id/visa_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/visa_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_visa_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--VISA End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--WECHATHKOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/wechathkoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/WECHATOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechathkoffl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--WECHATHKOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--WECHATOFFL Start-->
+                <LinearLayout
+                    android:id="@+id/wechatoffl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/WECHATOFFL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatoffl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--WECHATOFFL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+                <!--WECHATONL Start-->
+                <LinearLayout
+                    android:id="@+id/wechatonl_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:background="#F2EDE1">
+
+                    <RelativeLayout
+                        android:id="@+id/item2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/med_padding"
+                        android:paddingTop="@dimen/s_padding">
+
+                        <TextView
+                            android:id="@+id/title2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/WECHATONL_label"
+                            android:textColor="#0A5284"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_transaction_label"
+                            android:textColor="#555555"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_amount_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_amt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_request_refund_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_request_refund_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_request_refund_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_trx_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_void_trx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_void_amnt_label"
+                            android:textColor="#555555"
+                            android:textSize="@dimen/def_fontSize"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/total_wechatonl_void_amnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#0A5284"
+                            android:textSize="@dimen/def_fontSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--WECHATONL End-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B5B09C" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/listfooter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height"
+            android:paddingLeft="@dimen/def_padding"
+            android:paddingRight="@dimen/def_padding"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true">
+
+            <Button
+                android:id="@+id/print_report"
+                android:layout_width="@dimen/bwidth"
+                android:layout_height="@dimen/bheight"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_darkblue"
+                android:gravity="center"
+                android:text="@string/print"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/def_fontSize" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

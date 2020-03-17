@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StationeryOrder">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        tools:context=".OrderStationary">
+
+        <ImageView
+            android:id="@+id/signalImg"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/receipt_roll" />
+
+        <TextView
+            android:id="@+id/stationaryLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stationaryLbl"
+            android:textColor="#555555"
+            android:textStyle="bold"
+            android:textSize="@dimen/xlarge_fontSize" />
+
+        <TextView
+            android:id="@+id/signalMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stationaryDescription"
+            android:textColor="#555555"
+            android:layout_marginBottom="10dp"
+            android:textSize="@dimen/def_fontSize" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="@string/qtyRolls" />
+
+            <Button
+                android:id="@+id/minusQty"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="-"/>
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="1dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:editable="false"
+                android:text="10" />
+            <Button
+                android:id="@+id/addQty"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="+"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_lightblue"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/btnOrder" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

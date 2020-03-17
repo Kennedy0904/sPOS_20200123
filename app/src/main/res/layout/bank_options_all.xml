@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_columnSpan="1"
+    grid:alignmentMode="alignBounds"
+    grid:columnCount="3"
+    grid:rowOrderPreserved="true"
+    grid:useDefaultMargins="true">
+
+    <RelativeLayout
+        android:id="@+id/citiBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_citibank"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/citibank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_citibank"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Citi Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/publicBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_publicBank"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/pb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_publicBank"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Public Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/maybank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_maybank"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/maybank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_maybank"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Maybank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_scb"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:src="@drawable/scb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_scb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="SC Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cimb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_cimb"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:src="@drawable/cimb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_cimb"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="CIMB Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ocbc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_ocbc"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:src="@drawable/ocbc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_ocbc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="OCBC Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/uob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_uob"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/uob" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_uob"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="UOB Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hongLeong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_hong_leong"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/hongleong" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_hong_leong"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Hong Leong" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/hsbc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_hsbc"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/hsbc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_hsbc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="HSBC Bank" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/AlipayTH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        android:visibility="gone"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_alipayTH"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_alipayth" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_alipayTH"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/alipayth" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.GridLayout>

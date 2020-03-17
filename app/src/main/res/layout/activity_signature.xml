@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_repeat"
+    >
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="#0b609a"-->
+        <!--android:paddingTop="@dimen/xs_padding"-->
+        <!--android:paddingBottom="@dimen/xs_padding"-->
+        <!--android:paddingLeft="@dimen/large_padding"-->
+        <!--android:paddingRight="@dimen/large_padding" >-->
+        <!--<ImageView-->
+        <!--android:id="@+id/rplogo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:background="@drawable/hd_mpos" />-->
+        <!--<ImageView-->
+        <!--android:id="@+id/partnerlogo"-->
+        <!--android:layout_toRightOf="@+id/rplogo"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="@dimen/partnerlogo_height"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:visibility="visible"-->
+        <!--/>-->
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/land_header_height"
+        android:layout_below="@+id/header"
+        android:paddingTop="@dimen/def_padding"
+        android:paddingBottom="@dimen/def_padding"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingRight="@dimen/large_padding"
+        android:background="#AFAB97">
+        <TextView
+            android:id="@+id/showCurr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/large_fontSize"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+
+            android:fontFamily="Arial"
+            />
+        <TextView
+            android:id="@+id/showAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/showCurr"
+            android:layout_marginLeft="@dimen/xs_padding"
+            android:textSize="@dimen/large_fontSize"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:fontFamily="Arial"
+
+            />
+
+        <TextView
+            android:id="@+id/showMerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/def_fontSize"
+            android:fontFamily="Arial"
+            android:textColor="#e1ddc8"
+            />
+
+        <ProgressBar
+            android:id="@+id/sigloading"
+            android:visibility="gone"
+            style="@style/GenericProgressIndicatorMedium"
+            android:layout_marginRight="@dimen/space_padding"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/rel1"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/xs_padding"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingBottom="@dimen/s_padding"
+        android:paddingRight="@dimen/large_padding"
+        >
+
+        <TextView
+            android:id="@+id/txtins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="Arial"
+            android:gravity="center"
+            android:textSize="@dimen/def_fontSize"
+            android:text="@string/please_sign"
+            android:textColor="#555555" />
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".67"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners"
+            android:orientation="horizontal"
+            >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relbuttons"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_height="0dp"
+            android:layout_weight=".33"
+            >
+            <TextView
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/space_padding"
+                android:gravity="center"
+                android:padding="2dp"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:fontFamily="Arial"
+                android:text="@string/i_agree" />
+            <!-- 		<RelativeLayout -->
+            <!-- 		    android:id="@+id/buttons" -->
+            <!-- 		    android:layout_width="match_parent" -->
+            <!-- 		    android:layout_height="wrap_content" -->
+            <!-- 		    android:layout_marginTop="@dimen/space_padding" -->
+            <!-- 		    android:padding="0dp" -->
+            <!-- 		    android:layout_alignParentBottom="true"> -->
+            <Button
+                android:id="@+id/savesign"
+                android:layout_width="@dimen/bwidth"
+                android:layout_height="@dimen/bheight"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:textSize="@dimen/s_fontSize"
+                android:textColor="@color/white"
+                android:text="@string/confirm"
+                android:background="@drawable/btn_lightblue"/>
+            <Button
+                android:id="@+id/clearsign"
+                android:layout_width="@dimen/bwidth"
+                android:layout_height="@dimen/bheight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/s_fontSize"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="@string/clear"
+                android:background="@drawable/btn_lightblue"/>
+
+
+            <!-- 		  </RelativeLayout> -->
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

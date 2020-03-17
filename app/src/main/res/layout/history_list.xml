@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".History_List">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_calendar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:text="@string/from"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/txtdate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/def_fontSize"
+                android:textColor="#0b609a"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_calendar"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:text="@string/to"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/txtdate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/l2"
+        android:layout_below="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B5B09C" />
+
+    <LinearLayout
+        android:id="@+id/linearResult"
+        android:layout_below="@+id/l2"
+        android:layout_above="@+id/listfooter"
+        android:layout_width="match_parent"
+        android:background="#F2EDE1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <eu.erikw.PullToRefreshListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F2EDE1"
+            android:divider="@null"
+            android:cacheColorHint="@android:color/white" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingPanel"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_below="@+id/l1">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/GenericProgressIndicator"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_below="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/loading"
+            android:textSize="@dimen/def_fontSize"
+            android:textColor="#555555"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/l2"
+        android:layout_above="@+id/listfooter"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#555555"
+        android:text="@string/noResFound"
+        android:textSize="@dimen/def_fontSize"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/linefooter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/listfooter"
+        android:background="#9a9476"/>
+
+    <RelativeLayout
+        android:id="@+id/listfooter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinner_height"
+        android:paddingLeft="@dimen/def_padding"
+        android:paddingRight="@dimen/def_padding"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_width="@dimen/bwidth"
+            android:layout_height="@dimen/bheight"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_darkblue"
+            android:gravity="center"
+            android:text="@string/previous"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/def_fontSize" />
+
+        <TextView
+            android:id="@+id/pageNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#555555"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/def_fontSize"
+            android:text=""/>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="@style/GenericProgressIndicator"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="@dimen/bwidth"
+            android:layout_height="@dimen/bheight"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_darkblue"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/def_fontSize" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

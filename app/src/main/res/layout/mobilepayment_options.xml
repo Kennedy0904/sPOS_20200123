@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_columnSpan="1"
+    grid:alignmentMode="alignBounds"
+    grid:columnCount="3"
+    grid:rowOrderPreserved="true"
+    grid:useDefaultMargins="true">
+
+    <!-- ApplePay -->
+    <RelativeLayout
+        android:id="@+id/ApplePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1" >
+
+        <ImageView
+            android:id="@+id/ic_applepay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_applepay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_applepay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="ApplePay" />
+
+    </RelativeLayout>
+
+    <!-- GooglePay -->
+    <RelativeLayout
+        android:id="@+id/GooglePay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1">
+
+        <ImageView
+            android:id="@+id/ic_googlepay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_googlepay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_googlepay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="GooglePay" />
+
+    </RelativeLayout>
+
+    <!-- SamsungPay -->
+    <RelativeLayout
+        android:id="@+id/SamsungPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_background"
+        grid:layout_columnWeight="1"
+        grid:layout_gravity="fill"
+        grid:layout_rowWeight="1">
+
+        <ImageView
+            android:id="@+id/ic_samsungpay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_samsungpay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ic_samsungpay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="SamsungPay" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.GridLayout>

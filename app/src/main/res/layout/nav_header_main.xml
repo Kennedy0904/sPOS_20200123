@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="#2293BE"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:contentDescription="@string/nav_header_desc"-->
+        <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+        <!--app:srcCompat="@mipmap/ic_launcher_round" />-->
+
+    <TextView
+        android:id="@+id/headerMerchantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Testing Merchant" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/headerMerchantId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merchant ID" />
+
+        <TextView
+            android:id="@+id/headerMerchantIdValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/headerMerchantId"
+            android:layout_marginLeft="2dp"
+            android:text="00000000" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/terminalIdLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/headerBankTerminalId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Terminal ID" />
+
+        <TextView
+            android:id="@+id/headerBankTerminalIdValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/headerBankTerminalId"
+            android:layout_marginLeft="2dp"
+            android:text="00000000" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvLastLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_login" />
+
+    <TextView
+        android:id="@+id/tvLastLoginValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="26 April 2018 10:53 AM" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bin_range_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_bin_range_background"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/range"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:text="RANGE ##"
+        android:textColor="@color/gray2"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:hint="@string/bin_range_start"
+        android:id="@+id/rangeStart"
+        android:maxLength="6"
+        android:textColor="@color/gray2"
+        android:textColorHint="#c0c0c0"
+        android:textAlignment="center"
+        android:background="@drawable/edittext_rounded_background"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:nextFocusDown="@+id/rangeEnd"
+        android:layout_weight="35"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="-"
+        android:textColor="@color/gray2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        tools:layout_width="wrap_content" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:hint="@string/bin_range_end"
+        android:id="@+id/rangeEnd"
+        android:background="@drawable/edittext_rounded_background"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textColor="@color/gray2"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textColorHint="#c0c0c0"
+        android:layout_weight="35"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

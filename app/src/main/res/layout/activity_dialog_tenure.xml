@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dialog_padding"
+    android:paddingRight="@dimen/dialog_padding"
+    android:paddingTop="@dimen/dpadding"
+    android:paddingBottom="@dimen/dpadding"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".DialogTenure" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_rounded_corners"
+        android:padding="@dimen/def_padding">
+        <TextView
+            android:id="@+id/txtAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/s_fontSize"
+            android:padding="@dimen/def_padding"
+            android:text="Installment Plan"
+            />
+        <ProgressBar
+            android:id="@+id/ico_loading"
+            style="@style/GenericProgressIndicator"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/space_padding"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_box"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/s_padding"
+        android:paddingLeft="@dimen/s_padding"
+        android:paddingRight="@dimen/s_padding"
+        android:paddingBottom="@dimen/large_padding">
+
+        <LinearLayout
+            android:id="@+id/void_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/def_padding"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/txtBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#0b609a"
+                    android:text="CITI Bank"
+                    android:textSize="@dimen/def_fontSize"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#555555"
+                    android:text="@string/select_tenure"
+                    android:textSize="@dimen/def_fontSize"
+                    />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_background"
+                android:layout_marginTop="5dp">
+
+                <Spinner
+                    android:id="@+id/spnTenure"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                    android:background="@drawable/edittext_rounded_background"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dlgButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xs_margin"
+            android:gravity="center">
+            <Button
+                android:id="@+id/dialogCancel"
+                android:layout_width="@dimen/bwidth"
+                android:layout_height="@dimen/s_bheight"
+                android:background="@drawable/btn_lightblue"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/def_fontSize"
+                android:text="@string/cancel"/>
+
+            <Button
+                android:id="@+id/dialogConfirm"
+                android:layout_width="@dimen/bwidth"
+                android:layout_height="@dimen/s_bheight"
+                android:background="@drawable/btn_lightblue"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/def_fontSize"
+                android:layout_marginLeft="@dimen/xs_margin"
+                android:text="@string/s_confirm"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

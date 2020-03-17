@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_background"
+    android:orientation="horizontal"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="10dp"
+        android:layout_weight="95">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCEPTED"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_width="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25/4/2018" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_pay_type"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/ptype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sale"
+                android:textColor="#0b609a"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="@string/r_pay_method"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/pmtd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALIPAY"
+                android:textColor="#0b609a"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_mer_ref_no"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/mref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ref 123456"
+                android:textColor="#0b609a"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_pay_ref_no"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ref 123456"
+                android:textColor="#0b609a"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_amount"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/transactionreport_currCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RMB"
+                    android:textColor="#0b609a"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/transactionreport_currCode"
+                    android:text="100.00"
+                    android:textColor="#0b609a"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/merRequestAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_input_amount"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/merRequestAmt_History"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0b609a"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/surcharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/l00"
+            android:layout_marginRight="@dimen/def_padding"
+            android:layout_marginTop="0dp"
+            android:layout_toLeftOf="@+id/linDate"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_surcharge"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/Surcharge_History"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0b609a"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

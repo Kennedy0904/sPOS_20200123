@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".PaymentDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/progress_circle_bar_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            layout="@layout/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_marginTop="30dp"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/pay_phone_number"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/txtPhone1"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@drawable/edittext_rounded_background"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:padding="5dp"
+                android:nextFocusDown="@+id/txtPhone2"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/txtPhone2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.5"
+                android:background="@drawable/edittext_rounded_background"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:inputType="phone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/pay_email"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.5"
+                android:background="@drawable/edittext_rounded_background"
+                android:paddingLeft="4dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:orientation="vertical"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/remark"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/txtRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:paddingLeft="4dp"
+                android:gravity="top"
+                android:background="@drawable/edittext_rounded_background"
+                android:inputType="text|textMultiLine" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bheight"
+                android:layout_weight="15"
+                android:background="@drawable/btn_lightblue"
+                android:padding="@dimen/def_padding"
+                android:text="@string/reset"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bheight"
+                android:layout_weight="15"
+                android:background="@drawable/btn_lightblue"
+                android:padding="@dimen/def_padding"
+                android:text="@string/submit"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/def_fontSize" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

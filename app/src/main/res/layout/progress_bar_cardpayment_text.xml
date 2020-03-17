@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/progress_card_text_1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/enter_amount"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/progress_card_text_2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/read_card"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/progress_card_text_3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/confirm_payment"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/progress_card_text_4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/payment_result"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

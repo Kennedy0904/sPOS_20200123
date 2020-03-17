@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.smartpos">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.pax.permission.PRINTER" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CPAYSDK_PRINTER_MODULE" /> <!-- Added Phase 2 EMV 20191126 -->
+    <uses-permission android:name="com.pax.permission.MAGCARD" />
+    <uses-permission android:name="com.pax.permission.PED" />
+    <uses-permission android:name="com.pax.permission.ICC" />
+    <uses-permission android:name="com.pax.permission.PICC" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+
+    <application
+        android:name=".CardModule.app.TradeApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/spos_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Settings.PasswordProtection" />
+        <activity android:name=".Settings.SettingsTransaction" />
+        <activity android:name=".Settings.SettingsSystem" />
+        <activity android:name=".Settings.SettingsMerchant" />
+        <activity android:name=".Settings.SettingsKey" />
+        <activity
+            android:name=".installmentSuccess"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InstallmentPayment2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SimplePayQrResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Face2FacePaymentDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SuccessSimplePay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SimplePayOption"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settlement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScanQRPayment_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PresentQRPayment_3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScanQR_Failure"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayment_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayment_3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayment_Sign"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayment_Success"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayment_Failure"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardPayment_ManualEntry"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MobilePayment_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MobilePayment_3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MobilePayment_Success"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MobilePayment_Failure"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".History_List"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Scanner.CameraCapture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScanQR_Success"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Printer.BluetoothSelect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DialogSendReceipt"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DialogSendOrder"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DialogPaymentDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DialogCoupon"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DialogTenure"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EnterAmount"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".PresentQRPayment_2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SummaryReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestConnection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StationeryOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PresentQR_result"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PresentQR_failResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentTimeoutSetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Terms"
+            android:screenOrientation="portrait" /> <!-- Added Phase 2 EMV 20191119 -->
+        <activity
+            android:name=".Settings.SettingsEMVConfig"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_CardDataReadAttempt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_CardScheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.BinRange.BinRange"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Settings.EMV_ContactlessTxnLimit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_InputLimit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_Masking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_DisplayCardScheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_ReceiptMaskingRules"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_TransactionType"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_TxnTypeCardScheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_TxnTypeEntryMode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_TxnType"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_EntryMode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_CVM"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings.EMV_TAC"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Settings.ReceiptPrintingMode"
+            android:screenOrientation="portrait" /> <!-- Added Phase 2 EMV 20191126 -->
+
+
+        <activity
+            android:name=".CardModule.tradepaypw.SwingCardActivity"
+            android:process="com.pax.detectCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CardModule.tradepaypw.ConsumeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name=".Signature"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".SettlementCurrent"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".SettlementLast"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".Report"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".CardModule.tradepaypw.service.OtherDetectCard"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!--<action android:name="android.intent.action.INPUT_METHOD_CHANGED" />-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".CardPayment_3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_rounded_corners"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/txtAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/large_fontSize"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dialog_box"
+            android:padding="@dimen/s_padding"
+            >
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/med_padding"
+                >
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" >
+                    <TextView
+                        android:id="@+id/confirmDisplayMerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+                    <TextView
+                        android:id="@+id/confirmGetMerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/logout_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/logout_33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplaySurcharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/def_fontSize"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetSurcharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/def_fontSize"
+                        android:textColor="#555555"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayCardNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetCardNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayCardHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetCardHolder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmPMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetPMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayPayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetPayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayMerRef"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetMerRef"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/confirmDisplayRemark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                    <TextView
+                        android:id="@+id/confirmGetRemark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#555555"
+                        android:textSize="@dimen/def_fontSize"
+                        />
+
+                </TableRow>
+
+
+            </TableLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <Button
+                    android:id="@+id/c_cancel"
+                    android:layout_width="@dimen/bwidth"
+                    android:layout_height="@dimen/bheight"
+                    android:background="@drawable/btn_lightblue"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/def_fontSize"
+                    android:text="@string/cancel" />
+
+
+                <Button
+                    android:id="@+id/c_confirm"
+                    android:layout_width="@dimen/bwidth"
+                    android:layout_height="@dimen/bheight"
+                    android:padding="5dp"
+                    android:textColor="#ffffff"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_lightblue"
+                    android:textSize="@dimen/def_fontSize"
+                    android:layout_weight="1"
+                    android:text="@string/s_confirm" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

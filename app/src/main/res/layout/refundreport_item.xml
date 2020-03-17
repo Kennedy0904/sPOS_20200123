@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/history_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_background"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/refundreport_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2EDE1"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/refundreport_pMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Alipay_label"
+            android:textColor="#0A5284"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_refund_trx_label"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/refundreport_total_trx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#0A5284"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_refund_amnt_label"
+                android:textColor="#555555"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/refundreport_total_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#0A5284"
+                android:textSize="@dimen/def_fontSize"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/initPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/destPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/refundreport_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_transaction_date"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/refundreport_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25/4/2018"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_amount"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/refundreport_currCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RMB"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+                <TextView
+                    android:id="@+id/refundreport_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/refundreport_currCode"
+                    android:text="100.00"
+                    android:textColor="#0b609a"
+                    android:textSize="@dimen/def_fontSize" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_mer_ref"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/refundreport_mref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ref 123456"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_pay_ref"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/refundreport_pref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ref 123456"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/merRequestAmt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_input_amount"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/refundreport_merRequestAmt_History"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/surcharge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_surcharge"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/refundreport_Surcharge_History"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txn_number_label"
+                android:textSize="@dimen/def_fontSize" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/refundreport_qr_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0b609a"
+                android:textSize="@dimen/def_fontSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

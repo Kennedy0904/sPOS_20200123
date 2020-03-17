@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<!-- Please hide the following "progressBar" to see the layout design -->
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingLeft="30dp"
+		android:paddingRight="30dp">
+
+		<!-- Current Settlement Info -->
+		<RelativeLayout
+			android:id="@+id/titleLayout"
+			android:layout_width="match_parent"
+			android:layout_height="50dp">
+
+			<TextView
+				android:id="@+id/edtMername"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+
+				android:gravity="center"
+				android:text="@string/current_settlement_title"
+				android:textAlignment="center"
+				android:textColor="#555555"
+				android:textSize="@dimen/xlarge_fontSize"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+
+		<!-- Host name layout -->
+		<RelativeLayout
+			android:id="@+id/hostNameLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/titleLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/host" />
+
+			<RelativeLayout
+				android:layout_width="150dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:background="@drawable/edittext_rounded_background"
+				android:layout_marginTop="5dp">
+
+				<Spinner
+					android:id="@+id/hostNameSpinner"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					style="@style/Widget.AppCompat.DropDownItem.Spinner"/>
+
+				<!--android:entries="@array/settlement_acquirer" -->
+
+			</RelativeLayout>
+
+		</RelativeLayout>
+
+		<!-- Settlement Batch No -->
+		<RelativeLayout
+			android:id="@+id/batchNoLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/hostNameLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/settlement_batch_no"/>
+
+			<TextView
+				android:id="@+id/tvLocked"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/tvBatchNo"
+				android:layout_centerVertical="true"
+				android:textColor="#F00"
+				android:layout_marginRight="6dp"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/locked"/>
+
+			<TextView
+				android:id="@+id/tvBatchNo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="000001"/>
+
+		</RelativeLayout>
+
+		<!-- Grand Total Sale Txn -->
+		<RelativeLayout
+			android:id="@+id/grandTotalSaleTxnLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/batchNoLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/grand_total_sale_txn"/>
+
+			<TextView
+				android:id="@+id/tvGrandTotalSaleTxn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="0"/>
+		</RelativeLayout>
+
+		<!-- Grand Total Sale Amount -->
+		<RelativeLayout
+			android:id="@+id/grandTotalSaleAmtLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/grandTotalSaleTxnLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/grand_total_sale_amt"/>
+
+			<TextView
+				android:id="@+id/tvGrandTotalSaleAmount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentEnd="true"
+				android:layout_alignParentRight="true"
+				android:layout_marginTop="3dp"
+				android:layout_marginEnd="-1dp"
+				android:layout_marginRight="-1dp"
+				android:text="0.00"
+				android:textSize="@dimen/font_size_smaller" />
+		</RelativeLayout>
+
+		<!-- Grand Total Void Txn -->
+		<RelativeLayout
+			android:id="@+id/grandTotalVoidTxnLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/grandTotalSaleAmtLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/grand_total_void_txn"/>
+
+			<TextView
+				android:id="@+id/tvGrandTotalVoidTxn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="0"/>
+		</RelativeLayout>
+
+		<!-- Grand Total Void Amount -->
+		<RelativeLayout
+			android:id="@+id/grandTotalVoidAmtLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/grandTotalVoidTxnLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="@string/grand_total_void_amt"/>
+
+			<TextView
+				android:id="@+id/tvGrandTotalVoidAmount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:text="0.00"/>
+		</RelativeLayout>
+
+		<!-- Grand Total Amount -->
+		<RelativeLayout
+			android:id="@+id/grandTotalAmtLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/grandTotalVoidAmtLayout">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:textStyle="bold"
+				android:text="@string/grand_total_amount"/>
+
+			<TextView
+				android:id="@+id/tvGrandTotalAmount"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:textSize="@dimen/font_size_smaller"
+				android:textStyle="bold"
+				android:text="0.00"/>
+		</RelativeLayout>
+
+		<!-- Txn Summary Details -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_below="@+id/grandTotalAmtLayout">
+
+			<ScrollView
+				android:id="@+id/scrollTxn"
+				android:layout_width="match_parent"
+				android:layout_height="238dp">
+
+			</ScrollView>
+
+		</RelativeLayout>
+
+		<!-- Start Settlement Button -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="6dp">
+
+			<Button
+				android:id="@+id/btnStartSettlement"
+
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text= "@string/start_settlement" />
+
+		</RelativeLayout>
+
+		<!-- Retry Settlement Button -->
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true"
+			android:layout_marginBottom="6dp">
+
+			<Button
+				android:id="@+id/btnRetrySettlement"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:text="@string/retry_settlement"/>
+
+		</RelativeLayout>
+
+	</RelativeLayout>
+
+	<!-- Progress Bar -->
+	<include
+		android:id="@+id/settlementCurrentProgressBar"
+		android:visibility="visible"
+		layout="@layout/layout_progress_bar"/>
+
+</RelativeLayout>
