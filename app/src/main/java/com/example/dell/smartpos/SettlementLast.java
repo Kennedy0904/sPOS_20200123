@@ -538,6 +538,14 @@ public class SettlementLast extends AppCompatActivity {
 					currName + " " + String.format("%,.2f", grandTotalSaleAmount + grandTotalVoidAmount) :
 					"- " + currName + " " + String.format("%,.2f", grandTotalSaleAmount + grandTotalVoidAmount));
 
+			if (resultObject != null && resultObject.length() > 0) {
+				// Have result and show "Start Settlement" button
+				btnReprintSettlement.setVisibility(View.VISIBLE);
+			} else {
+				// No result and hide "Start Settlement" button
+				btnReprintSettlement.setVisibility(View.GONE);
+			}
+
 			dynamicScrollView(resultArray);
 		}
 	}

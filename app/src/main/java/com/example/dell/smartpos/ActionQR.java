@@ -57,6 +57,8 @@ public class ActionQR extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... arg) {
 
+        System.out.println("send to paydollar");
+
         String argMerchantId = arg[0];
         String argOrderId = arg[1];
         String argPMethod = arg[2];
@@ -155,6 +157,9 @@ public class ActionQR extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
+
+        System.out.println("return from paydollar");
+
 
         // Close the progressDialog
         if ((progressDialog != null) && progressDialog.isShowing()) {

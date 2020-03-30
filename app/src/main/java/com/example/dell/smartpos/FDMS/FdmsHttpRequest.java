@@ -366,6 +366,7 @@ public class FdmsHttpRequest extends AsyncTask<String, Void, String> {
 						FdmsVariable.setRequestAction("updateFailedTxn");
 						FdmsVariable.setAction("Update_Failed_Txn");
 
+						// Update the created txn to "Rejected"
 						FdmsHttpRequest request = new FdmsHttpRequest(createTxn, context);
 						request.execute();
 

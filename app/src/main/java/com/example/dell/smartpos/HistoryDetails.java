@@ -265,16 +265,18 @@ public class HistoryDetails extends AppCompatActivity {
         }
         Log.d("OTTO", "device SETTEXT>>" + printername + ":" + printeraddress);
 
-        //Initialize PAX Printer
-        getObj = new GetObj(getApplicationContext());
 
         // Get device manufacturer
         deviceMan = GlobalFunction.getDeviceMan();
         System.out.println("deviceMan" + deviceMan);
 
         //Initialize K9 printer
-        if(deviceName.equalsIgnoreCase("K9")){
+        if (deviceName.equalsIgnoreCase("K9")) {
             printUtilK9.bindService();
+        }
+        //Initialize PAX Printer
+        if (deviceName.equalsIgnoreCase("PAX")) {
+            getObj = new GetObj(getApplicationContext());
         }
         //---------for print func---------//
 
@@ -623,7 +625,7 @@ public class HistoryDetails extends AppCompatActivity {
 
                     } else {
                         /** Void Transaction **/
-                        type = actRefund;
+                        type = actVoid;
                         System.out.println("[HistoryDetails] Enter Void Transaction");
                         System.out.println("[HistoryDetails] isCardpMethods: " + GlobalFunction.isCardpMethods(payMethod));
 
@@ -675,7 +677,6 @@ public class HistoryDetails extends AppCompatActivity {
                                 inputSettingPassword.setHint(getString(R.string.password));
 
                                 qrVoidPassword = GlobalFunction.getQRVoidPassword(HistoryDetails.this);
-
 
                                 dialog.setView(inputSettingPassword);
                                 dialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -740,6 +741,7 @@ public class HistoryDetails extends AppCompatActivity {
         });
     }
 
+    /** Perform Void / Refund Action**/
     public void confirmAction() {
 
         if (payBankId.equalsIgnoreCase(Constants.FIRST_DATA)) {
@@ -768,9 +770,6 @@ public class HistoryDetails extends AppCompatActivity {
 
             fdmsRequest = new FdmsApiFunction(HistoryDetails.this);
             fdmsRequest.voidRequest();
-
-//            Intent intent = new Intent(HistoryDetails.this, DialogActivity.class);
-//            startActivityForResult(intent, 1);
 
         } else {
             Intent intent = new Intent(HistoryDetails.this, DialogActivity.class);

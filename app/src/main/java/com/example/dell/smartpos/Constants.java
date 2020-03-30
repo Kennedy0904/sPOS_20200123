@@ -556,46 +556,61 @@ public class Constants {
     public static String url_siampay_payFDMSReturnMPOS = "https://test2.siampay.com/b2cDemo/eng/directPay/mPOS/payFDMSReturnMPOS.jsp";
     public static String url_siampay_genTxtXMLMPOS_Settlement = "https://test2.siampay.com/b2cDemo/GenSettlementTransactionSPOS";
 
-/*//PRODUCTION URL
+/*    //PRODUCTION URL
 
-    ////	CHECK VERSION URL
+    //	//CHECK VERSION URL
     public static String url_check_version = "https://www.paydollar.com/b2c2/CheckVersion";
-    ////
-//	 //PayDollar API URL
+    //
+    // PayDollar API URLa
     public static String url_paydollar_payForm = "https://www.paydollar.com/b2c2/eng/payment/payForm.jsp";
-    public static String url_paydollar_payComp = "https://www.paydollar.com/b2c2/eng/directPay/payComp.jsp";
-    public static String url_paydollar_orderApi = "https://www.paydollar.com/b2c2/eng/merchant/api/orderApi.jsp";
+    public static String url_paydollar_payComp = "https://www.paydollar.com/b2c2/eng/directPay/payCompMPOS.jsp";
+    public static String url_paydollar_orderApi = "https://www.paydollar.com/b2c2/eng/merchant/api/orderApi_mpos.jsp";
+    //    public static String url_paydollar_merInfo = "https://www.paydollar.com/b2c2/eng/merchant/api/merInfoReturn.jsp";
     public static String url_paydollar_merInfo = "https://www.paydollar.com/b2c2/eng/merchant/api/merInfoReturn_mpos.jsp";
     public static String url_paydollar_sendNoti = "https://www.paydollar.com/b2c2/SendNotification";
     public static String url_paydollar_fileUpload = "https://www.paydollar.com/b2c2/FileUploadServlet";
     public static String url_paydollar_genTxtXML = "https://www.paydollar.com/b2c2/GenTxnXML";
+    public static String url_paydollar_genTxtXMLMPOS = "https://www.paydollar.com/b2c2/GenTransactionSPOS";
+    //    public static String url_paydollar_genTxtXMLMPOS = "https://www.paydollar.com/b2c2/GenTxnRecord";
     public static String url_paydollar_partnerlogo = "https://www.paydollar.com/b2c2/images/merLogo/";
     public static String url_paydollar_CheckStatus = "https://sit.paydollar.com/b2cDemo/eng/directPay/payComp_test.jsp";
     public static String url_paydollar_sendOrder = "https://www.paydollar.com/b2c2/SendEmailMPOS";
     public static String url_paydollar_settinginfo = "https://www.paydollar.com/b2c2/smartpos/mer_info_setting/getMerchantSettingsInfo.jsp";
-    public static String url_paydollar_genTxtXMLMPOS = "https://www.paydollar.com/b2c2/GenTxnXML";
-    public static String url_paydollar_checkBoostStatus = "https://test2.paydollar.com/b2cDemo/eng/payment/checkStatusBOOSTOFFL_MPOS.jsp";
+    //    public static String url_paydollar_settinginfo = "http://192.168.65.180:8080/Paydollar_Test/getMerchantSettingsInfo.jsp";
+    public static String url_paydollar_checkBoostStatus = "https://www.paydollar.com/b2c2/eng/payment/checkStatusBOOSTOFFL_MPOS.jsp";
+    public static String url_paydollar_QRAction = "https://www.paydollar.com/b2c2/eng/directPay/payKBankQR_Cancel.jsp";
+    public static String url_paydollar_GrabPayAction = "https://www.paydollar.com/b2c2/eng/directPay/mPOS/payGrabMPOS.jsp";
+    public static String url_paydollar_payFDMSReturnMPOS = "https://www.paydollar.com/b2c2/eng/directPay/mPOS/payFDMSReturnMPOS.jsp";
+    public static String url_paydollar_genTxtXMLMPOS_Settlement = "https://www.paydollar.com/b2c2/GenSettlementTransactionSPOS";
 
-    //
-    //PesoPay API URL/
+    // PesoPay API URL
     public static String url_pesopay_payForm = "https://www.pesopay.com/b2c2/eng/payment/payForm.jsp";
-    public static String url_pesopay_payComp = "https://www.pesopay.com/b2c2/eng/directPay/payComp.jsp";
-    public static String url_pesopay_orderApi = "https://www.pesopay.com/b2c2/eng/merchant/api/orderApi.jsp";
-    public static String url_pesopay_merInfo = "https://www.pesopay.com/b2c2/eng/merchant/api/merInfoReturn.jsp";
+    public static String url_pesopay_payComp = "https://www.pesopay.com/b2c2/eng/directPay/payCompMPOS.jsp";
+    public static String url_pesopay_orderApi = "https://www.pesopay.com/b2c2/eng/merchant/api/orderApi_mpos.jsp";
+    public static String url_pesopay_merInfo = "https://www.pesopay.com/b2c2/eng/merchant/api/merInfoReturn_mpos.jsp";
     public static String url_pesopay_sendNoti = "https://www.pesopay.com/b2c2/SendNotification";
     public static String url_pesopay_fileUpload = "https://www.pesopay.com/b2c2/FileUploadServlet";
     public static String url_pesopay_genTxtXML = "https://www.pesopay.com/b2c2/GenTxnXML";
-    public static String url_pesopay_partnerlogo = "https://www.pesopay.com/b2c2/images/";
+    public static String url_pesopay_genTxtXMLMPOS = "https://www.pesopay.com/b2c2/GenTransactionSPOS";
+    public static String url_pesopay_partnerlogo = "https://www.pesopay.com/b2c2/images/merLogo/";
+    public static String url_pesopay_QRAction = "https://www.pesopay.com/b2c2/eng/directPay/payKBankQR_Cancel.jsp";
+    public static String url_pesopay_GrabPayAction = "https://www.pesopay.com/b2c2/eng/directPay/mPOS/payGrabMPOS.jsp";
+    public static String url_pesopay_payFDMSReturnMPOS = "https://www.pesopay.com/b2c2/eng/directPay/mPOS/payFDMSReturnMPOS.jsp";
+    public static String url_pesopay_genTxtXMLMPOS_Settlement = "https://www.pesopay.com/b2c2/GenSettlementTransactionSPOS";
 
-    //SiamPay API URL
-    public static String url_siampay_payForm = "https://www.siampay.com/b2c2/eng/payment/payForm.jsp";
-    public static String url_siampay_payComp = "https://www.siampay.com/b2c2/eng/directPay/payComp.jsp";
-    public static String url_siampay_orderApi = "https://www.siampay.com/b2c2/eng/merchant/api/orderApi.jsp";
-    public static String url_siampay_merInfo = "https://www.siampay.com/b2c2/eng/merchant/api/merInfoReturn.jsp";
+    // SiamPay API URL
+    public static String url_siampay_payForm = "https://test2.pesopay.com/b2c2/eng/payment/payForm.jsp";
+    public static String url_siampay_payComp = "https://www.siampay.com/b2c2/eng/directPay/payCompMPOS.jsp";
+    public static String url_siampay_orderApi = "https://www.siampay.com/b2c2/eng/merchant/api/orderApi_mpos.jsp";
+    public static String url_siampay_merInfo = "https://www.siampay.com/b2c2/eng/merchant/api/merInfoReturn_mpos.jsp";
     public static String url_siampay_sendNoti = "https://www.siampay.com/b2c2/SendNotification";
     public static String url_siampay_fileUpload = "https://www.siampay.com/b2c2/FileUploadServlet";
     public static String url_siampay_genTxtXML = "https://www.siampay.com/b2c2/GenTxnXML";
-    public static String url_siampay_partnerlogo = "https://www.siampay.com/b2c2/images/";*/
+    public static String url_siampay_genTxtXMLMPOS = "https://www.siampay.com/b2c2/GenTransactionSPOS";
+    public static String url_siampay_partnerlogo = "https://www.siampay.com/b2c2/images/merLogo/";
+    public static String url_siampay_QRAction = "https://www.siampay.com/b2c2/eng/directPay/payKBankQR_Cancel.jsp";
+    public static String url_siampay_payFDMSReturnMPOS = "https://www.siampay.com/b2c2/eng/directPay/mPOS/payFDMSReturnMPOS.jsp";
+    public static String url_siampay_genTxtXMLMPOS_Settlement = "https://www.siampay.com/b2c2/GenSettlementTransactionSPOS";*/
 
 /*
 //		//CHECK VERSION URL/*

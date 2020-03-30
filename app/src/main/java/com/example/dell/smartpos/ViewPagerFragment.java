@@ -1,6 +1,7 @@
 package com.example.dell.smartpos;
 
 
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -86,7 +87,8 @@ public class ViewPagerFragment extends Fragment {
 
         cardPayBankId = GlobalFunction.getCardPayBankId(getContext());
 
-        if (!cardPayBankId.equals("") && GlobalFunction.isValidCardBank(cardPayBankId) && GlobalFunction.getDeviceMan().equalsIgnoreCase("PAX")) {
+        if (!cardPayBankId.equals("") && GlobalFunction.isValidCardBank(cardPayBankId) && GlobalFunction.isFDMS_BASE24Installed(
+                getActivity().getPackageManager())) {
             menuList.add(settlement);
         }
 
